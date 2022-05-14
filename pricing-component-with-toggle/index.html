@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | [Challenge Name Here]</title>
+  <link rel="stylesheet" href="./css/output.css">
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+  <script src="//unpkg.com/alpinejs" defer></script>
+</head>
+<body class="bg-gray-200 bg-[url('../images/bg-top.svg')] bg-no-repeat bg-right-top min-h-screen flex justify-center items-center" >
+  <div x-data="{ pricing : 'monthly', package : { 'monthly' : { basic: '&dollar;19.99', professional: '&dollar;24.99', master : '&dollar;39.99'}, 'yearly' : { basic: '&dollar;190.99', professional: '&dollar;240.99', master : '&dollar;390.99'}}}" class="w-full max-w-4xl mx-auto">
+    <div class="flex flex-col items-center">
+      <h1 class="text-center text-gray-600 text-5xl my-4">Our Pricing</h1>
+      <div class="flex gap-2 my-5 text-gray-500 cursor-pointer">
+        <div x-on:click="pricing = 'yearly'">Annually</div>
+        <div x-on:click="pricing = (pricing == 'monthly')?'yearly':'monthly'" x-bind:class="`w-12 h-6 bg-indigo-200 rounded-full p-1 items-center flex ${(pricing=='monthly')?'justify-end':'justify-start'}`  ">
+          <div class="w-5 h-5 bg-white/80 border border-blue-400 rounded-full"></div>
+        </div>
+        <div x-on:click="pricing = 'monthly'">Monthly</div>
+      </div>
+    </div>
+    <div class="grid xl:grid-cols-3 mt-5 xl:gap-0 gap-5 xl:mx-0 m-5">
+      <div class="bg-white p-5 rounded flex flex-col gap-0 text-center">
+        <h5 class="font-bold text-gray-500">Basic</h5>
+        <h1 class="text-6xl font-bold text-gray-700 my-5" x-text="package[pricing].basic"></h1>
+        <p class="border-y border-gray-200 py-3">500 GB Storage</p>
+        <p class="border-b border-gray-200 py-3">2 Users Allowed</p>
+        <p class="border-b border-gray-200 py-3">Send up to 3 GB</p>
+        <button class="my-5 border rounded py-2">Learn More</button>
+      </div>
+      <div class="bg-indigo-600 p-5 xl:scale-110 rounded flex flex-col gap-0 text-center text-white">
+        <h5 class="font-bold text-gray-200">Professional</h5>
+        <h1 class="text-6xl font-bold text-gray-100 my-5" x-text="package[pricing].professional"></h1>
+        <p class="border-y border-gray-50/40 py-3">1 TB Storage</p>
+        <p class="border-b border-gray-50/40 py-3">5 Users Allowed</p>
+        <p class="border-b border-gray-50/40 py-3">Send up to 10 GB</p>
+        <button class="my-5 border rounded py-2">Learn More</button>
+      </div>
+      <div class="bg-white p-5 rounded flex flex-col gap-0 text-center">
+        <h5 class="font-bold text-gray-500">Master</h5>
+        <h1 class="text-6xl font-bold text-gray-700 my-5" x-text="package[pricing].master"></h1>
+        <p class="border-y border-gray-200 py-3">2 TB Storage</p>
+        <p class="border-b border-gray-200 py-3">10 Users Allowed</p>
+        <p class="border-b border-gray-200 py-3">Send up to 20 GB</p>
+        <button class="my-5 border rounded py-2">Learn More</button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
