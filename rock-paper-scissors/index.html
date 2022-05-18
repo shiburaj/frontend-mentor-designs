@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Rock, Paper, Scissors</title>
+  <link rel="stylesheet" href="./css/output.css">
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body class="bg-gradient-to-b p-5 from-sky-900 to-black min-h-screen flex flex-col">
+  <div class="flex md:max-w-3xl w-full justify-between mx-auto p-5 border-2 border-white/30 rounded-md ">
+    <img src="./images/logo.svg" alt="" srcset="">
+    <div class="bg-white flex flex-col justify-center items-center p-4 rounded-md">
+      <h6 class="text-xs text-center leading-none font-bold text-gray-600">SCORE</h6>
+      <h1 class="text-6xl font-bold text-gray-700 leading-none">00</h1>
+    </div>
+  </div>
+  <div class="flex-grow  w-full min-h-[25rem] text-green-400 flex justify-center items-center" >
+    <div class="hidden relative bg-[url('../images/bg-triangle.svg')] bg-no-repeat bg-center bg-auto w-[25rem] h-[25rem]">
+      <div class="absolute cursor-pointer top-5 left-5 block w-28 h-28 rounded-full border-[0.9rem] border-indigo-500 bg-white hover:opacity-90 active:scale-95 transition-all duration-500 ease-in-out">
+        <img class="p-4 active:scale-95 transition-all duration-500 ease-in-out" src="./images/icon-paper.svg" alt="" srcset="">
+      </div>
+      <div class="absolute cursor-pointer top-5 left-[17rem] block w-28 h-28 rounded-full border-[0.9rem] border-yellow-500 bg-white hover: active:scale-95  transition-all duration-300 ease-in-out">
+        <img class="p-4 active:scale-95 transition-all duration-500 ease-in-out" src="./images/icon-scissors.svg" alt="" srcset="">
+      </div>
+      <div class="absolute cursor-pointer top-[16rem] left-[9rem] block w-28 h-28 rounded-full border-[0.9rem] border-red-500 bg-white hover: active:scale-95 transition-all duration-300 ease-in-out">
+        <img class="p-4 active:scale-95 transition-all duration-500 ease-in-out" src="./images/icon-rock.svg" alt="" srcset="">
+      </div>
+      <div class="hidden absolute bg-white rounded-xl w-[25rem] h-[25rem] p-6">
+        <button class="absolute top-5 right-5">
+          <img src="./images/icon-close.svg" alt="">
+        </button>
+        <h1 class="text-center font-bold text-xl text-gray-600 bg-white mb-8">RULES</h1>
+        <div class="flex justify-center items-center">
+          <img src="./images/image-rules.svg" alt="">
+        </div>
+      </div>
+    </div>
+    <div class="hidden flex justify-between w-full max-w-3xl gap-8 mx-10">
+      <div class="text-center">
+        <h2 class="text-center text-xl font-bold uppercase text-gray-100 mb-6">You picked</h2>
+        <div class="cursor-pointer block w-36 h-36 rounded-full border-[1rem] border-indigo-500 bg-white ">
+          <img class="p-7" src="./images/icon-paper.svg" alt="" srcset="">
+        </div>
+      </div>
+      <div class="text-center animate-pulse">
+        <h2 class="text-center text-xl font-bold uppercase text-gray-100 mb-6">THE House picked</h2>
+        <div class="cursor-pointer mx-auto block w-36 h-36 rounded-full border-[1rem] border-gray-500 bg-white ">
+          <img class="p-7" src="./images/icon-paper.svg" alt="" srcset="">
+        </div>
+      </div>
+      
+      
+    </div>
+
+    <div class="flex justify-between items-center w-full max-w-3xl gap-8 mx-10 flex-wrap">
+      <div class="text-center order-1 sm:order-1">
+        <h2 class="text-center text-base font-bold uppercase text-gray-100 mb-6">You picked</h2>
+        <div class="cursor-pointer block w-36 h-36 rounded-full border-[1rem] border-indigo-500 bg-white ">
+          <img class="p-7" src="./images/icon-paper.svg" alt="" srcset="">
+        </div>
+      </div>
+      <div class="order-3 sm:order-2 text-center mx-auto">
+        <h1 class="text-white text-3xl uppercase font-bold">YOU LOSE</h1>
+        <button class="block bg-white w-full rounded text-red-500 py-1 text-sm mt-4">PLAY AGAIN</button>
+      </div>
+      <div class="text-center order-2 sm:order-3">
+        <h2 class="text-center text-base font-bold uppercase text-gray-100 mb-6">THE House picked</h2>
+        <div class="cursor-pointer mx-auto block w-36 h-36 rounded-full border-[1rem] border-red-500 bg-white ">
+          <img class="p-7" src="./images/icon-paper.svg" alt="" srcset="">
+        </div>
+      </div>
+      
+      
+    </div>
+  </div>
+  <div class="flex justify-center items-center py-5">
+    <button class="border rounded-md px-6 py-1 text-gray-200">RULES</button>
+  </div>
+  
+</body>
+</html>
