@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Tip calculator app</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h3>TIP</h3>
+    <div class="card">
+      <div class="left-card">
+        <div class="bill-input">
+          <h6>Bill</h6>
+          <div class="bill-input-box">
+            <img src="./images/icon-dollar.svg" alt="">
+            <input type="text" class="form-control" value="142.55">
+          </div>
+        </div>
+        <div class="bill-percent">
+          <h6>Select Tip %</h6>
+          <div class="bill-selector">
+            <div class="pill pill-primary">5%</div>
+            <div class="pill pill-primary">10%</div>
+            <div class="pill pill-active">15%</div>
+            <div class="pill pill-primary">25%</div>
+            <div class="pill pill-primary">50%</div>
+            <div class="pill pill-default">Custom</div>
+          </div>
+        </div>
+        <div class="bill-input">
+          <h6>Number of People</h6>
+          <div class="bill-input-box">
+            <img src="./images/icon-person.svg" alt="">
+            <input type="text" class="form-control" value="5">
+          </div>
+        </div>
+      </div>
+      <div class="right-card">
+        <div class="tip-row-container">
+          <div class="tip-row">
+            <div class="tip-label">
+              <h6>Tip Amount</h6>
+              <p>/ person</p>
+            </div>
+            <div class="tip-value">
+              $4.27
+            </div>
+          </div>
+          <div class="tip-row">
+            <div class="tip-label">
+              <h6>Total</h6>
+              <p>/ person</p>
+            </div>
+            <div class="tip-value">
+              $32.79
+            </div>
+          </div>
+        </div>
+        <button class="reset-tip-btn">RESET</button>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,700;1,700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-strong-cyan: hsl(172, 67%, 45%);
+    --color-very-dark-cyan: hsl(183, 100%, 15%);
+    --color-dark-grayish-cyan: hsl(186, 14%, 43%);
+    --color-grayish-cyan: hsl(184, 14%, 56%);
+    --color-light-grayish-cyan: hsl(185, 41%, 84%);
+    --color-very-light-grayish-cyan: hsl(189, 41%, 97%);
+    --color-white: hsl(0, 0%, 100%);
+    font-family: 'Space Mono', monospace;
+
+}
+
+body {
+    background-color: var(--color-light-grayish-cyan);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    width: clamp(600px,90vw,800px);
+    
+}
+
+.container h3 {
+    text-align: center;
+    margin-bottom: 2em;
+    font-size: 1.2rem;
+    color: var(--color-dark-grayish-cyan);
+}
+
+.card {
+    background-color: var(--color-white);
+    padding: 2em;
+    border-radius: 1.5em;
+    display: flex;
+    width: 100%;
+}
+
+.left-card, .right-card {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    column-gap: 3;
+}
+
+.left-card {
+    margin-right: 2em;
+}
+
+.bill-input {
+    color: var(--color-grayish-cyan);
+    margin-bottom: 2em;
+}
+
+.bill-input-box {
+    background-color: var(--color-very-light-grayish-cyan);
+    padding: .3em;
+    border-radius: .2em;
+    display: flex;
+    justify-content: space-between;
+    padding: .5em;
+    align-items: center;
+}
+
+.form-control {
+    border: none;
+    background-color: inherit;
+    text-align: right;
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: var(--color-very-dark-cyan);
+    outline: none;
+}
+
+.bill-selector {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1;
+}
+
+.bill-percent h6 {
+    color: var(--color-grayish-cyan);
+}
+
+.pill {
+    text-align: center;
+    color: var(--color-white);
+    padding: .3em;
+    margin: .4em;
+    border-radius: .5em;
+    cursor: pointer;
+}
+
+.pill-primary {
+    background-color: var(--color-very-dark-cyan);
+}
+
+.pill-active {
+    background-color: var(--color-strong-cyan);
+    color: var(--color-very-dark-cyan);
+}
+
+
+.right-card {
+    background-color: var(--color-very-dark-cyan);
+    padding: 2em;
+    color: var(--color-white);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 1em;
+}
+
+.tip-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1em;
+}
+
+.tip-row .tip-value {
+    font-size: 2rem;
+    color: var(--color-strong-cyan);
+}
+
+.tip-row .tip-label p {
+    font-size: .6rem;
+    color: var(--color-grayish-cyan);
+}
+
+.reset-tip-btn {
+    background-color: var(--color-strong-cyan);
+    padding: 1em;
+    border: none;
+    border-radius: .3em;
+    font-weight: bold;
+    font-size: 1rem;
+    color: var(--color-very-dark-cyan);
+    cursor: pointer;
+}
+
+@media screen and (max-width: 700px){
+    .card {
+        flex-direction: column;
+    }
+
+    .left-card, .right-card {
+        width: 100%;
+    }
+}
